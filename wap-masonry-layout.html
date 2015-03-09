@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>wap mansonry layout</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=2" />
+	<style type="text/css">
+	.falls-detail{width: 100%;}
+	.falls-detail li{float: left; clear: left; width: 50%; margin: 0 0 10px; overflow: hidden; box-sizing: border-box;}
+	.falls-detail li.right{float: right; clear: right; padding: 0 0 0 10px;}
+	.falls-detail a{float: left; width: 100%;}
+	.falls-detail img{vertical-align: top; max-width: 100%;}
+	.falls-detail span{float: left; width: 100%; height: 24px; line-height: 24px; overflow: hidden; font-size: 12px; color: #888; word-wrap: break-word; white-space: nowrap; text-overflow: ellipsis;}
+	</style>
+</head>
+<body>
+	<div class="falls-detail">
+		<ul>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/e4/76/03/e47603a8f024facbed04bc2626961f20_226w.jpg" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/f8/c9/3d/f8c93dcbe31fb7357780a9eee0776046_226w.gif" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/e4/76/03/e47603a8f024facbed04bc2626961f20_226w.jpg" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/f8/c9/3d/f8c93dcbe31fb7357780a9eee0776046_226w.gif" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/a7/49/b2/a749b2270fcaf87e305de536b0bbdf07_226w.jpg" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/f8/c9/3d/f8c93dcbe31fb7357780a9eee0776046_226w.gif" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/a7/49/b2/a749b2270fcaf87e305de536b0bbdf07_226w.jpg" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/f8/c9/3d/f8c93dcbe31fb7357780a9eee0776046_226w.gif" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/f8/c9/3d/f8c93dcbe31fb7357780a9eee0776046_226w.gif" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="http://images.55bbs.com/55shuoimg/pic/a7/49/b2/a749b2270fcaf87e305de536b0bbdf07_226w.jpg" />
+					<span>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+<script type="text/javascript">
+window.onload = function(){
+	var adjustItemHeights = (function () {
+	    var leftColumnHeight = 0,
+	        rightColumnHeight = 0,
+	        items = document.querySelectorAll('.falls-detail li');
+
+	    for (var i = 0; i < items.length; i++) {
+	      	// console.log(items[i].offsetHeight);
+	      	if (leftColumnHeight > rightColumnHeight) {
+	      		items[i].classList.add('right');
+	        	rightColumnHeight += items[i].offsetHeight;
+		    } else {
+		        leftColumnHeight += items[i].offsetHeight;
+		    }
+	   	}
+	    return items;
+  	})();
+}
+</script>
+
+</body>
+</html>
